@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<h1>ASP.NET Validation Controls</h1>
+<asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+<p>
+    @* <asp:RegularExpressionValidator ID="string" runat="server" ErrorMessage="string" ValidationExpression="string"
+        ValidationGroup="string">
+    </asp:RegularExpressionValidator>
+    <asp:CustomValidator ID="CustomValidator1" runat="server" ClientValidationFunction=.cvf_func.
+        ErrorMessage="CustomValidator">
+    </asp:CustomValidator>
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" DisplayMode="BulletList" ShowSummary="true"
+        HeaderText="Errors:" /> *@
+    First Name :
+    <asp:TextBox ID="txtFirstName" runat="server" CausesValidation="False"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Provide First
+Name" ControlToValidate="txtFirstName"> Required
+    </asp:RequiredFieldValidator>
+</p>
+<p>
+    Last Name:
+    <asp:TextBox ID="txtLastName" runat="server" CausesValidation="False"></asp:TextBox>>
+    </asp:TextBox>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please Provide Last Name"
+        ControlToValidate="txtLastName"> Required
+    </asp:RequiredFieldValidator>
+</p>
+<p>
+    <asp:Button ID="Button1" runat="server" Text="Submit" />
+</p>
